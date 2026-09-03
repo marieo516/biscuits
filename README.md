@@ -6,9 +6,7 @@ The application includes a PHP/MySQL backend for storing cookies, ingredient, an
 
 ## Demo
 
-<video src="demo/demo_video.mp4" controls>
-  Your browser does not support the video tag. [Watch the demo video](demo/demo_video.mp4).
-</video>
+[Watch the demo video](demo/demo_video.mp4).
 
 The following screenshots show the main application screens:
 
