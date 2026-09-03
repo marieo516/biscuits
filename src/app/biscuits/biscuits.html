@@ -1,0 +1,48 @@
+<div class="card h-100" [ngStyle]="{
+  'background-color': biscuitStatus === 'Cru' ? 'rgba(196, 168, 130, 0.2)' : 
+                      biscuitStatus === 'Dans le four' ? 'rgba(212, 122, 32, 0.2)' : 
+                      biscuitStatus === 'Cuit' ? 'rgba(107, 143, 94, 0.2)' : 
+                      'transparent'}">
+
+  <div class="card-body d-flex flex-column pt-4">
+
+    <!-- CODE BELOW INSTEAD OF THIS :
+    @if (biscuitStatus === 'Cru') {
+      <div style="width:20px;height:20px;background-color:red;"></div>
+    } @else if (biscuitStatus === 'Dans le four') {
+      <div style="width:20px;height:20px;background-color:orange;"></div>
+    } @else if (biscuitStatus === 'Cuit') {
+      <div style="width:20px;height:20px;background-color:green;"></div>
+    } @else {
+    } -->
+
+    @if (getColor() !== null) {
+      <div [style.width]="'15px'" [style.height]="'15px'" 
+           [style.background-color]="getColor()" 
+           [title]="getStatus()"
+           style="border-radius: 50%; position: absolute; top: 16px; right: 16px; width: 18px; height: 18px;">
+      </div>
+    }
+
+    <h4 class="card-title" [ngStyle]="{color: getColor()}">{{ biscuitName }}</h4>
+    <p class="status" [ngStyle]="{color: getColor()}">Status: {{ getStatus() }}</p>
+    <a [routerLink]=[id]> > Détails</a>
+
+    <p class="text-start mb-0 mt-2">Modifier :</p>
+    <input type="text" class="form-control mt-2" [(ngModel)]="biscuitName">
+    <input type="text" class="form-control mt-2" [(ngModel)]="biscuitStatus">
+
+    <div class="d-flex mt-auto pt-2 justify-content-between">
+      @if (biscuitStatus === 'Cru') {
+        <button class="btn btn-sm btn-success" (click)="onSwitchOn()">Disponible</button>
+      }
+      @if (biscuitStatus === 'Cuit') {
+        <button class="btn btn-sm btn-danger" (click)="onSwitchOff()">Non disponible</button>
+      }
+
+      <button type="button" class="btn btn-sm btn-danger" (click)="onDelete()"><img class="img-fluid" style="max-width: 18px; filter: brightness(0) invert(1);" src="images/garbage.png" alt="Delete"></button>
+    </div>
+
+    
+  </div>
+</div>

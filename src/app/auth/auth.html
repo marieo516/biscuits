@@ -1,0 +1,13 @@
+<div class="container text-center mt-4">
+    <h2>Authentification</h2>
+
+    @if (!authStatus) {
+    <button class="btn btn-success mt-2" (click)="onSignIn()" [disabled]="isSigningIn">Se connecter</button>
+    }
+    @if (isSigningIn) {
+    <p class="text-center mt-3 text-brown">Connexion en cours...</p>
+    }
+    @if (authStatus) {
+    <button class="btn btn-danger mt-2" (click)="onSignOut()">Se déconnecter</button>
+    }
+</div>

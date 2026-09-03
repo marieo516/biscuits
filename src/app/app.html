@@ -1,0 +1,51 @@
+<div class="d-flex flex-column min-vh-100">
+    <app-title></app-title>
+
+    <nav class="navbar navbar-expand-lg mb-3">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav w-100">
+                <li class="nav-item ms-3">
+                    <a class="nav-link" routerLinkActive="active" routerLink="auth">Authentification</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" routerLinkActive="active" routerLink="biscuits">Biscuits</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" routerLink="edit">Nouveau biscuit</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" routerLink="uploadRecipe">Recettes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" routerLink="ingredients">Ingrédients</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" routerLink="editIngredient">Nouvel ingrédient</a>
+                </li>
+                <li class="nav-item ms-auto me-3">
+                    <a class="nav-link" routerLinkActive="active" routerLink="panier">
+                        <img class="nav-icon" src="images/cart.png" alt="Panier" style="height:1.25rem; width:auto;" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container flex-grow-1 pb-5">
+        <div class="row">
+            <div class="col-xs-12">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-auto py-4 text-center" style="background-color: #8B6355; color: #FDF6EC;">
+        <app-coordinates></app-coordinates>
+        <app-name></app-name>
+    </footer>
+</div>

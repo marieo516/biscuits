@@ -1,0 +1,6 @@
+<div class="container text-center">
+    <h2>{{ name }}</h2>
+    <p [style.color]="getColor()" class="mb-0 mt-5">Statut : {{ status }}</p>
+    <p class="text-brown mb-5">Temps de cuisson : {{ bakingTime }} secondes</p>
+    <a class="btn btn-secondary" routerLink="/biscuits">Retour à la liste</a>
+</div>

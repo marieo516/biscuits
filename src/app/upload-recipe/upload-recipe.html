@@ -1,0 +1,39 @@
+<div class="container mt-4">
+    <div class="row justify-content-center align-items-center">
+
+        <div class="col-sm-4 text-center">
+            <div style="font-size: 80px">📷</div>
+        </div>
+
+        <div class="col-sm-6">
+            <form method="post" action="http://127.0.0.1:8000/backend/upload.php" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="fichier">Photo de la recette</label>
+                    <input type="file" id="fichier" name="fichier" class="form-control mt-2" accept="image/*">
+                </div>
+                <input type="hidden" name="MAX_FILE_SIZE" value="0">
+                <button type="submit" class="btn btn-brown mt-4">Envoyer</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+@if (message) {
+<p class="text-center mt-3">{{ message }}</p>
+}
+
+<hr />
+
+<div class="container">
+    <div class="row row-cols-2 row-cols-md-4 g-3 mt-2">
+        @for (image of images; track image) {
+        <div class="col">
+            <a [href]="'uploads/' + image" target="_blank">
+                <div class="img-wrapper">
+                <img [src]="'uploads/' + image" class="w-100 rounded">
+                </div>
+            </a>
+        </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,19 @@
+.navbar {
+  background-color: #886254 !important; 
+}
+
+.navbar .nav-link {
+  color: #fdf6ec !important; 
+}
+
+.navbar .nav-link:hover {
+  color: #e0c7bc !important;
+}
+
+.navbar .nav-link img.nav-icon {
+  filter: brightness(0) invert(1);
+}
+
+.navbar .nav-link:hover img.nav-icon {
+  filter: invert(75%) sepia(8%) saturate(140%) hue-rotate(4deg) brightness(1.05) contrast(0.95);
+}

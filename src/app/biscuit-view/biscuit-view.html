@@ -1,0 +1,62 @@
+<div class="container text-center mt-3">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="d-flex justify-content-between mb-4">
+                <div class="d-flex gap-4 align-items-center">
+                    <div class="d-flex gap-1 align-items-center">
+                        <div style="width:15px; height:15px; background-color:#A0A0A0; border-radius:50%;"></div>
+                        <p class="mb-0">Cru</p>
+                    </div>
+                    <div class="d-flex gap-1 align-items-center">
+                        <div style="width:15px; height:15px; background-color:#C87941 ; border-radius:50%;"></div>
+                        <p class="mb-0">Dans le four</p>
+                    </div>
+                    <div class="d-flex gap-1 align-items-center">
+                        <div style="width:15px; height:15px; background-color:#8B9E6B ; border-radius:50%;"></div>
+                        <p class="mb-0">Cuit</p>
+                    </div>
+                </div>
+
+                <div class="d-flex ">
+                    <button class="btn btn-save" (click)="onSave()" [disabled]="isCooking">
+                        Enregistrer
+                    </button>
+                </div>
+            </div>
+
+            <h2>Menu de biscuits</h2>
+            <p>Mis à jour : {{ lastUpdate | async }}</p>
+
+            @if (isSaving) {
+            <p class="text-center mt-0 mb-0 text-brown">Veuillez ne pas recharger la page lors de la cuisson de biscuits...</p>
+            }
+
+            @if (hasUnsavedChanges) {
+            <p class="text-center mt-0 mb-3 text-brown">Des changements ne sont pas encore enregistrés.</p>
+            }
+
+            @if (isLoading) {
+            <p class="text-center mt-5 text-brown">Chargement des biscuits...</p>
+            } @else {
+            <div class="row row-cols-1 row-cols-md-3 g-3 mt-2">
+                @for (biscuit of biscuits; track biscuit.id; let i = $index) {
+                <div class="col">
+                    <app-biscuits [biscuitName]="biscuit.name" [biscuitStatus]="biscuit.status" [indexBiscuit]="i"
+                        [id]="biscuit.id">
+                    </app-biscuits>
+                </div>
+                }
+            </div>
+
+            <button class="btn btn-success mt-5 mx-1" [disabled]="isCooking" (click)="allAvailable()">
+                Tous disponible
+            </button>
+            <button class="btn btn-danger mt-5 mx-1" [disabled]="isCooking" (click)="nothingAvailable()">
+                Tous non disponible
+            </button>
+            }
+
+            <br>
+        </div>
+    </div>
+</div>
