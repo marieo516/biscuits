@@ -14,7 +14,7 @@ The following screenshots show the main application screens:
 
 | Biscuits |
 | --- | --- |
-| ![Authentication screen](demo/auth_screen.jpg) |
+| ![Biscuits screen](demo/biscuits_screen.jpg) |
 
 | Add a biscuit | Ingredients |
 | --- | --- |
@@ -24,9 +24,9 @@ The following screenshots show the main application screens:
 | --- | --- |
 | ![Add ingredient screen](demo/new_ingredient_screen.jpg) | ![Shopping cart screen](demo/cart_screen.jpg) |
 
-| Recipes | Authentication
+| Recipes | Authentication |
 | --- |
-| ![Recipes screen](demo/recipes_screen.jpg) | ![Biscuits screen](demo/biscuits_screen.jpg) |
+| ![Recipes screen](demo/recipes_screen.jpg) | ![Authentication screen](demo/auth_screen.jpg) |
 
 
 ## Features
