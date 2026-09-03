@@ -6,11 +6,15 @@ The application includes a PHP/MySQL backend for storing cookies, ingredient, an
 
 ## Demo
 
+<video src="demo/demo_video.mp4" controls>
+  Your browser does not support the video tag. [Watch the demo video](demo/demo_video.mp4).
+</video>
+
 The following screenshots show the main application screens:
 
-| Authentication | Biscuits |
+| Biscuits |
 | --- | --- |
-| ![Authentication screen](demo/auth_screen.jpg) | ![Biscuits screen](demo/biscuits_screen.jpg) |
+| ![Authentication screen](demo/auth_screen.jpg) |
 
 | Add a biscuit | Ingredients |
 | --- | --- |
@@ -20,9 +24,9 @@ The following screenshots show the main application screens:
 | --- | --- |
 | ![Add ingredient screen](demo/new_ingredient_screen.jpg) | ![Shopping cart screen](demo/cart_screen.jpg) |
 
-| Recipes |
+| Recipes | Authentication
 | --- |
-| ![Recipes screen](demo/recipes_screen.jpg) |
+| ![Recipes screen](demo/recipes_screen.jpg) | ![Biscuits screen](demo/biscuits_screen.jpg) |
 
 
 ## Features
